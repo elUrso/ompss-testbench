@@ -12,7 +12,7 @@ WORKDIR /deps
 
 # Install bench
 RUN apt update
-RUN apt install libssl-dev -y
+RUN apt install libssl-dev neofetch -y
 RUN git clone https://github.com/elUrso/bench.git
 WORKDIR /deps/bench
 RUN cargo install
@@ -20,5 +20,10 @@ WORKDIR /deps
 
 WORKDIR /
 
+# Install nano
+RUN apt install nano -y
+
 # Copy Files
-COPY . /src
+COPY ./src/taskdep-suit /src
+
+WORKDIR /src
