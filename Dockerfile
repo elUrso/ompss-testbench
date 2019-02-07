@@ -12,10 +12,14 @@ WORKDIR /deps
 
 # Install bench
 RUN apt update
-RUN apt install libssl-dev neofetch -y
+RUN apt install libssl-dev -y
 RUN git clone https://github.com/elUrso/bench.git
 WORKDIR /deps/bench
 RUN cargo install
+WORKDIR /deps
+RUN git clone https://github.com/dylanaraps/neofetch.git
+WORKDIR /deps/neofetch
+RUN make install
 WORKDIR /deps
 
 WORKDIR /
