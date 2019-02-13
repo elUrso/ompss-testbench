@@ -1,0 +1,32 @@
+#Test bench
+
+This container is intended to remove the needs to install libraries and other files in order to run benchmarks form the taskdep-suit.
+
+To use it just create a folder named src and add your benchmarks there.
+
+You shall clone the benchmarks into src/taskdep-suit
+
+Utilize `update.sh` to update the image and `run.sh` to test it.
+
+The bench comands shall be used inside the benchmark folder.
+
+The structure of the container is:
+
+/src <- files are copied here
+
+$suit_root
+    /conf <- configuration file
+    /c    <- bench api folder
+    /group
+        /benchmark
+        ...
+    ...
+
+The commands to use bench are:
+
+bench build  - Build the project
+bench run    - Run it and generate jsons
+bench export - Get machine information and export csv
+
+The conf file is not yet used by all the benchmarks, but it should hold the prefix configurations to make your life easier in cross-compiling and testing special flags for optimization.
+
