@@ -34,3 +34,13 @@ Even though the build is made using makefiles usually, do not simply run make bu
 
 Notes on Parsec benchmarks:
 The require more optimizations and the source code of many needs clean up.
+
+Working benchmarks:
+    kastors
+        jacobi
+        sparselu
+        strassen
+    parsec
+        blackscholes
+        dedup
+        swaptions
