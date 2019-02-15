@@ -30,3 +30,7 @@ bench export - Get machine information and export csv
 
 The conf file is not yet used by all the benchmarks, but it should hold the prefix configurations to make your life easier in cross-compiling and testing special flags for optimization.
 
+Even though the build is made using makefiles usually, do not simply run make build, bench algo creates folders at the momement and future releases may do more complex stuff  as the goal of the software is to deliver zeroconf benchmark tests with nice optimizations.
+
+Notes on Parsec benchmarks:
+The require more optimizations and the source code of many needs clean up.
