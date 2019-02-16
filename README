@@ -44,3 +44,17 @@ Working benchmarks:
         blackscholes
         dedup
         swaptions
+
+Failed benchmarks:
+    parsec
+        bodytrack - Error compiling ompss version
+            Reproduce:
+            get parsec/bodytrack from parsec-ompss repo
+            cd it's src folder
+            $autoreconf -fiv
+            $./configure --enable-ompss
+            $make
+            then:
+            mcxx_main.cpp: In function 'void smp_ol_mainOMPSS_3_unpacked(long int, int, ParticleFilterOMPSS<TrackingModel>*, void*, std::ostream&)':
+            mcxx_main.cpp:33047:18: error: return-statement with a value, in function returning 'void' [-fpermissive]
+                return 0;
