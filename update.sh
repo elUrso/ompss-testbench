@@ -1,1 +1,1 @@
-sudo docker build . -t ompss_dev
+docker build . -t ompss_dev
