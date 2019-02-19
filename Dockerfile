@@ -27,6 +27,12 @@ WORKDIR /
 # Install nano
 RUN apt install nano -y
 
+# Install helper libraries, this will be REMOVED once bench is updated do support require folders
+WORKDIR /
+COPY ./required /required
+WORKDIR /required/gsl
+RUN ./build.sh
+
 # Copy Files
 COPY ./src/taskdep-suit /src
 

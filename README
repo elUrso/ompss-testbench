@@ -58,3 +58,6 @@ Failed benchmarks:
             mcxx_main.cpp: In function 'void smp_ol_mainOMPSS_3_unpacked(long int, int, ParticleFilterOMPSS<TrackingModel>*, void*, std::ostream&)':
             mcxx_main.cpp:33047:18: error: return-statement with a value, in function returning 'void' [-fpermissive]
                 return 0;
+
+About Future revisions:
+    The required folder here is to build some libraries required, in a future update this will be removed because bench will support compiling helper libraries only once.
