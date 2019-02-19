@@ -7,7 +7,7 @@ make distclean
 
 export LIBS="${LIBS} -lm"
 
-./configure --prefix=/usr/include/gsl --disable-shared
+./configure --prefix=/usr --disable-shared
 
 make
 
